@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://dental-consultorio-mg/sitemap-index.xml

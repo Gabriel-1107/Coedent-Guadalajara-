@@ -6,9 +6,9 @@ import {  } from 'astrowind:config';
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white flex items-center"
 >
   <img
-    src="/images/logodest.png"
+    src="/images/logotipo.jpeg"
     alt="Logo"
-    class="logo h-20 w-25 mr-6"
+    class="logo h-20 w-20 mr-6 rounded-full"
   />
 </span>
 
@@ -16,7 +16,9 @@ import {  } from 'astrowind:config';
   /* Ajustes generales para el logo */
   .logo {
     height: 80px; /* Tamaño base para pantallas grandes */
-    width: auto; /* Asegura proporciones correctas */
+    width: 80px; /* Asegura que sea circular */
+    object-fit: cover; /* Mantiene la proporción dentro del círculo */
+    border-radius: 50%; /* Hace que la imagen sea circular */
   }
 
   /* Ajustes para texto */
@@ -28,6 +30,7 @@ import {  } from 'astrowind:config';
   @media (max-width: 768px) {
     .logo {
       height: 50px; /* Reduce el tamaño del logo */
+      width: 50px;
       margin-right: 10px; /* Ajusta el espaciado */
     }
 
@@ -39,6 +42,7 @@ import {  } from 'astrowind:config';
   @media (max-width: 480px) {
     .logo {
       height: 40px; /* Reduce aún más el tamaño del logo para celulares pequeños */
+      width: 40px;
       margin-right: 8px; /* Ajusta el espaciado */
     }
 
