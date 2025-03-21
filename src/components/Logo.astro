@@ -1,9 +1,49 @@
 ---
-import { SITE } from 'astrowind:config';
+import {  } from 'astrowind:config';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white flex items-center"
 >
-  🚀 {SITE?.name}
+  <img
+    src="/images/logodest.png"
+    alt="Logo"
+    class="logo h-20 w-25 mr-6"
+  />
 </span>
+
+<style>
+  /* Ajustes generales para el logo */
+  .logo {
+    height: 80px; /* Tamaño base para pantallas grandes */
+    width: auto; /* Asegura proporciones correctas */
+  }
+
+  /* Ajustes para texto */
+  .self-center {
+    font-size: 2rem; /* Tamaño base del texto */
+  }
+
+  /* Media Query para pantallas pequeñas (celulares) */
+  @media (max-width: 768px) {
+    .logo {
+      height: 50px; /* Reduce el tamaño del logo */
+      margin-right: 10px; /* Ajusta el espaciado */
+    }
+
+    .self-center {
+      font-size: 1.2rem; /* Reduce el tamaño del texto */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      height: 40px; /* Reduce aún más el tamaño del logo para celulares pequeños */
+      margin-right: 8px; /* Ajusta el espaciado */
+    }
+
+    .self-center {
+      font-size: 1rem; /* Texto más pequeño para pantallas muy pequeñas */
+    }
+  }
+</style>
